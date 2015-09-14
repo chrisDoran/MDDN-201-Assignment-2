@@ -1,0 +1,265 @@
+/* -------------------------------- 
+
+Primary style
+
+-------------------------------- */
+html * {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 100%;
+  font-family: "Roboto", sans-serif;
+  color: #3d3536;
+  background: transparent;
+}
+
+body, html {
+  /* important */
+  height: 100%;
+}
+
+a {
+  color: #b4d7a8;
+  text-decoration: none;
+}
+
+/* -------------------------------- 
+
+Modules - reusable parts of our design
+
+-------------------------------- */
+.borders{ 
+  border:1px solid black;
+}
+.cd-container {
+  /* this class is used to give a max-width to the element it is applied to, and center it horizontally when it reaches that max-width */
+  width: 90%;
+  max-width: 768px;
+  margin: 0 auto;
+  margin-top: 100px;
+}
+.cd-container::after {
+  /* clearfix */
+  content: '';
+  display: table;
+  clear: both;
+}
+
+/* -------------------------------- 
+
+Main components 
+
+-------------------------------- */
+.subscription{
+  color: rgb(47,43,38);
+  text-align: center;
+  font-family: Helvetica;
+  font-weight: bold;
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+.subscriptions a {
+  padding-top: 200px;
+  color: rgb(126,154,140);
+}
+.content{
+  height: 450px;
+  font-size: 40px;
+  text-align: center;
+}
+
+.nav a {  
+  color: #5a5a5a;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 14px 10px;
+  text-transform: uppercase;
+}
+
+.nav li {
+  color: rgb(47,43,38);
+  position: relative;
+  display: inline;
+  padding-top: 30px;
+  top: -150px;
+}
+
+.gallery-cell {
+  width: 100%; /* full width */
+  height: 430px; /* height of gallery */
+  margin-right: 50px;
+  color: rgb(47,43,38);
+}
+
+
+#stats{
+  margin-top: 25px;
+  height:360px;
+}
+
+.stats img{
+  margin-left: 60px;
+}
+
+
+.cd-main-content {
+  /* you need to assign a min-height to the main content so that the children can inherit it*/
+  height: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.cd-fixed-bg {
+  position: relative;
+  min-height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  z-index: 1;
+}
+.cd-fixed-bg h1, .cd-fixed-bg h2 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  bottom: auto;
+  right: auto;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -o-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  width: 90%;
+  max-width: 1170px;
+  text-align: center;
+  font-size: 30px;
+  font-size: 1.875rem;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  color: rgb(247,232,214);
+}
+.cd-fixed-bg.cd-bg-1 {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.cd-fixed-bg.cd-bg-1 h1{
+  position: absolute;
+  text-align: center;
+  margin-left: 0px;
+  color: rgb(247,232,214);
+  font: bold 24px/45px Helvetica, Sans-Serif; 
+  letter-spacing: -1px;
+  padding: 10px;
+  font-size: 140px;
+}
+.cd-fixed-bg.cd-bg-1 p{
+  position: absolute;
+  left: 42%;
+  top: 60%;
+  color: rgb(247,232,214);
+    font: 24px/45px 'Raleway', Sans-Serif; 
+    font-size: 18px;  
+    word-spacing: -2px;  
+}
+
+@media only screen and (min-width: 768px) {
+  .cd-fixed-bg h1, .cd-fixed-bg h2 {
+    font-size: 36px;
+  }
+}
+@media only screen and (min-width: 1170px) {
+  .cd-fixed-bg {
+    background-attachment: fixed;
+  }
+  .cd-fixed-bg h1, .cd-fixed-bg h2 {
+    font-size: 48px;
+    font-weight: 300;
+  }
+}
+
+.cd-scrolling-bg {
+  position: relative;
+  min-height: 100%;
+  padding: 4em 0;
+  line-height: 1.6;
+  
+  z-index: 2;
+}
+.cd-scrolling-bg.cd-color-1 {
+  background-color: rgba(247, 232, 214, 0.9);
+  color: #a6989a;
+}
+.cd-scrolling-bg.cd-color-2 h2{
+  margin-top: 0px;
+  margin-bottom: 25px;
+  text-align: center;
+  font-size: 54px;
+}
+.cd-scrolling-bg.cd-color-2 p{
+  margin-top: 5px;
+  text-align: center;
+  font-size: 32px;
+  font-family: 'Raleway';
+  line-height: 110%;
+}
+#table td{
+  margin: 90px;
+}
+#explan {
+  margin-top: 40px;
+  margin-bottom: 44px;
+  line-height: 150%;
+  font-size: 24px;
+}
+#explan1 {
+  margin-top: 120px;
+  margin-bottom: 44px;
+  line-height: 150%;
+  font-size: 24px;
+}
+#head2{
+  top: 7%;
+  position: absolute;
+  text-align: center;
+  font-size: 80px;
+  font-family: 'Pacifico', cursive;
+}
+
+.details{
+  font:'Raleway', Sans-Serif;
+  font-size: 25px;
+  color: rgb(247,232,214);
+  position: absolute;
+  top:50%;
+  left: 1%;
+  text-align: center;
+  line-height: 120%;
+}
+
+.hidden{
+     opacity:0;
+}
+.visible{
+     opacity:1;
+}
+.cd-scrolling-bg.cd-color-1 p{
+  font:'Raleway', Sans-Serif;
+  font-size: 24px;
+  color: #3d3536;
+  text-align: center;
+}
+
+.cd-scrolling-bg.cd-color-2 {
+  background-color: rgba(247, 232, 214, 0.9);
+  color: #3d3536;
+}
+.cd-scrolling-bg.cd-color-3 {
+  background-color: rgba(247, 232, 214, 0.9);
+  color: #3d3536;
+}
+
